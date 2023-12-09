@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="utf-8">
+<title>Experimental Camera</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="link rel="preconnect href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="link rel="preconnect href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,400&family=Poppins&display=swap" rel="stylesheet">
+<style> 
+	/* place your css here and not in an external style sheet. */
+	
+	body {background-image: url('images/background-small.jpg'); background-size: cover; margin: 0px 10px; }
+	
+	section {display: grid; 
+			grid-template-columns: 1fr;}
+	sec tion>* {border: 1px solid green;}
+	
+	#menu {width: 100%;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0px;
+			border-bottom: 2px solid black;
+			padding-top:10px;
+			background: white;
+			}
+	
+	#nav { display: flex;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+		}
+	#nav a {
+		text-decoration: none;
+		color: black; 
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		}
+	#arrow {max-height: 15px;
+		margin-bottom: 0px;
+		padding-bottom: 0px;}
+	#about {
+		margin: 0;
+		padding-top: 2px;
+		font-family: 'poppins';
+		font-size: 30px;
+		font-weight: 300;
+		}
+	#about_p {
+		margin: 0;
+		padding-top: 50px;
+		padding-bottom: 4px;
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		border-bottom: 2px solid black;
+		}
+	#image_s {
+		width: 400px;
+		margin-top: 10px;
+        height: 400px;
+		margin-left: 10px;
+        }
+	#image_process {
+		width: 50%;
+		margin-top: 10px;
+        }
+	#work {
+		width: 100%;}
+	#work_tag {
+		margin: 0;
+		padding-top: 0px;
+		font-family: 'poppins';
+		font-size: 30px;
+		font-weight: 300;
+		}
+	#name_date {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 50px;
+		margin-bottom: 0px;
+		}
+	#name_date h3 {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		margin-bottom: 30px;
+		}
+	#piece_1 {
+		border-bottom: 2px solid black;
+		}
+	#piece_1 p {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		padding: 0;
+		margin-bottom: 8px;
+		}
+	#piece_2 p {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		padding: 0;
+		margin-bottom: 8px;
+		}
+	#piece_1 img {
+		margin-top: 10px;
+		width: 100%;
+		border: 2px solid grey;
+		margin-bottom: 8px;
+		}
+	#wire {
+		max-width: 100%;}
+	
+	#name_date_2 {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 0px;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		}
+	#name_date_2 h3 {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		margin-top: 10px;
+		margin-bottom: 30px;
+		}
+	#prototype { max-width: 100%;
+		}
+	#final {
+		padding-bottom: 10px;
+		border-bottom: 2px solid black;}
+	.final {
+		border-top: 2px solid black;}
+	#nav_f {
+		display: flex;
+		justify-content: space-between;
+		}
+	#contact_tag {
+		margin: 0;
+		padding-top: 10px;
+		font-family: 'poppins';
+		font-size: 30px;
+		font-weight: 300;
+		}
+	#links {
+		margin: 0;
+		padding-top: 27px;
+		margin-bottom: 8px;
+		width: 100%;
+		padding-left: 0px;
+		}
+	#links li{
+		padding-left: 0px;
+		list-style: none;
+		}
+	#links a {
+		text-decoration: none;
+		color: black;
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		}
+	#links a:hover {
+		color: blue;
+		}
+	footer {
+		border-bottom: 2px solid black;
+		margin-bottom: 8px;
+		}
+	
+	
+	/* bellow CSS for iPad */
+	@media all and (min-width: 600px) {
+	section {display: grid; 
+			grid-template-rows: 1fr; 
+			grid-template-columns: 25% 25% 50%;}
+	#menu {grid-column: 1/ 4;
+			width: 100%;}
+	header {display: flex;
+			border-bottom: 2px solid black;
+			justify-content: space-between;
+			}
+	#about {grid-column: 1/ 2;
+			max-width: 25%;}
+	#about_p {grid-column: 2/ 4;
+			max-width: 75%;
+			border-bottom: none;
+			padding-top: 0px;
+			}
+	#work {display: flex;
+			border-bottom: 2px solid black;
+			justify-content: space-between;}
+	#work_tag{grid-column: 1/ 2;
+			max-width: 25%;
+			}
+	#work_pieces {grid-column: 2/ 4;
+			width: 75%;}
+	#piece_1 {grid-column: 2/4;
+			min-width: 75%;
+			display: flex;
+			justify-content: space-between;
+			}
+	#flex {
+			grid-column: 2/4;
+			min-width: 75%;
+			display: flex;
+			justify-content: space-between;}
+	#name_date {
+			padding: 0px;
+			margin-top: 0px;
+			margin-right: 20px;
+			}
+	#na me_date h3 {
+			padding: 0px;
+			padding-right: 5px;}
+	#na me_date_2 h3 {
+			padding: 0px;
+			padding-right: 5px;}
+	#name_date_2 {
+			padding: 0px;
+			margin-top: 0px;
+			margin-right: 20px;
+			}
+	#img_1 {grid-column: 2/ 4;
+			max-width: 65%;
+			display: block;
+			height: 100%;
+			}
+	#wire { grid-column: 2/4;
+			width: 100%;
+			flex: wrap;
+			display: block;
+			margin-bottom: 10px;
+			}
+	#final {grid-column: 2/4;
+			display: flex;
+			max-width: 75%;
+			border: none;}
+	.final {border: none;}
+	#prototype {margin-left: 10px;
+			height: 80vh;
+			margin-top: 10px;
+			margin-bottom: 10px;}
+	footer {margin-top: 20px;
+			border-top: 2px solid black;}
+	#nav_f {display: flex;
+			justify-content: space-between;}
+	#contact_tag {grid-column: 1/ 2;
+			max-width: 25%;}
+	#links {grid-column: 2/ 4;
+			max-width: 75%;
+			border-bottom: none;
+			padding-top: 10px;}
+
+	header, footer  {grid-column: 1 / 4;}
+	#work {grid-column: 1 / 4;}
+	
+	
+	
+</style>
+</head>
+<body>
+<main>
+<section>
+	<nav id=menu>
+		<h2 id=nav>
+			<a href="index.html">ANA BOMBIN ORDAS</a>
+			<a href="index.html"><img id=arrow src="images/arrow.png" alt="back"></a>
+		</h2>
+	</nav>
+
+	<header>
+		<h2 id=about>Experimental Camera</h2>
+		<article id=about_p>
+			 <iframe class=frame id=image_s  style="align: right; overflow: hidden;" src="https://editor.p5js.org/anabombin/full/2anpsCkr2"></iframe>
+		</article>
+	</header>	
+	
+	<article id=work>
+		<h2 id=work_tag>Process</h2>
+		
+		<div id=work_pieces>
+		<article id=piece_1>
+			<div id=name_p>
+				<article id=name_date>
+					<h3 id=name>Description</h3>
+					<h3 id=date></h3>
+				</article>
+			</div>
+				<div id=img_1>
+					<p>With this sketch, I was kind of stumped at the beginning. I had any ideas but none seemed to work out either because p5 was too slow to process, and VSCode would glitch. Eventually, I became so frustrated that I felt like I was seeing double on my code and could no longer concentrate. From there, I came up with this idea. I wanted my experimental camera to represent how tired and out of focus eyes get the more time you spend looking at a screen.
+				</div>
+		</article>
+		<article id=piece_1>
+			<div id=name_p>
+				<article id=name_date_2>
+					<h3 id=name>Process</h3>
+					<h3 id=date></h3>
+				</article>
+			</div>
+            <div id=img_1>
+					<p> I started by creating a simple grid that followed the hours. So, it started at midnight with just one square, and as the hours go by, the number of rows and columns would align with the hours to make the grid smaller until midnight. Then, I incorporated the video, by replacing squares with the current video of the camera. Finally, to make it more realistic to myself and the hours I spend on the screen, I changed it to start at 8AM, with one grid, and start climbing from there. This way, it aligns with my own schedule and time spend on the computer throughout the day.
+			</div>
+		</article>
+		<article id=piece_2>
+			<div id=flex>
+				<div id=name_p>
+					<article id=name_date_2>
+						<h3 id=name>Reflection</h3>
+					</article>
+				</div>
+				<div id=img_1>
+					<p> This project was possibly the hardest to execute simply because we are now aware of so many elements and our capabilities to incorporate them into a sketch, but we are much more limited for time and are still attempting to incorporate the video element. Which is unknown to us.
+					<p> I attempted paying around with teachable machine to see if I could incorporate it in my work somehow, and although I had several ideas, they ended up being much harder than anticipated, and no matter how much I trained the model, it always seemed to falter at some point.</p>
+				</div>
+			</div>
+		</article>
+		</div>
+	</article>
+		
+	<header>
+		<h2 id=about class=final>Final Sketch</h2>
+		<div id=final>
+			<article id=about_p>
+				<iframe class=frame id=image_s  style="align: right; overflow: hidden;" src="https://editor.p5js.org/anabombin/full/2anpsCkr2"></iframe>
+			</article>
+		</div>
+		
+	</header>
+	
+	<footer id=footer>
+		<nav id=nav_f>
+			<h2 id=contact_tag>Contact</h2>	
+			<ul id=links>
+				<li><a href="all-work.html">Email: anabombin@newschool.edu</a></li>
+				<li><a href="https://anabombin.myportfolio.com/">Full portfolio</a></li>
+				<li><a href="https://www.linkedin.com/in/ana-bombin-270005202/">LinkedIn</a></li>
+			</ul>		
+		</nav>	
+	</footer>
+</section>
+</main>
+</body>
+</html>

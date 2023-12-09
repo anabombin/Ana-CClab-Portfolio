@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="utf-8">
+<title>Data Portrait</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="link rel="preconnect href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="link rel="preconnect href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,400&family=Poppins&display=swap" rel="stylesheet">
+<style> 
+	/* place your css here and not in an external style sheet. */
+	
+	body {background-image: url('images/background-small.jpg'); background-size: cover; margin: 0px 10px; }
+	
+	section {display: grid; 
+			grid-template-columns: 1fr;}
+	sec tion>* {border: 1px solid green;}
+	
+	#menu {width: 100%;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0px;
+			border-bottom: 2px solid black;
+			padding-top:10px;
+			background: white;
+			}
+	
+	#nav { display: flex;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+		}
+	#nav a {
+		text-decoration: none;
+		color: black; 
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		}
+	#arrow {max-height: 15px;
+		margin-bottom: 0px;
+		padding-bottom: 0px;}
+	#about {
+		margin: 0;
+		padding-top: 2px;
+		font-family: 'poppins';
+		font-size: 30px;
+		font-weight: 300;
+		}
+	#about_p {
+		margin: 0;
+		padding-top: 50px;
+		padding-bottom: 4px;
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		border-bottom: 2px solid black;
+		}
+	#image_60 {
+		width: 600px;
+		margin-top: 10px;
+        height: 635px;
+		margin-left: 10px;
+        }
+	#image_process {
+		width: 50%;
+		margin-top: 10px;
+        }
+	#work {
+		width: 100%;}
+	#work_tag {
+		margin: 0;
+		padding-top: 0px;
+		font-family: 'poppins';
+		font-size: 30px;
+		font-weight: 300;
+		}
+	#name_date {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 50px;
+		margin-bottom: 0px;
+		}
+	#name_date h3 {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		margin-bottom: 30px;
+		}
+	#piece_1 {
+		border-bottom: 2px solid black;
+		}
+	#piece_1 p {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		padding: 0;
+		margin-bottom: 8px;
+		}
+	#piece_2 p {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		padding: 0;
+		margin-bottom: 8px;
+		}
+	#piece_1 img {
+		margin-top: 10px;
+		width: 100%;
+		border: 2px solid grey;
+		margin-bottom: 8px;
+		}
+	#wire {
+		max-width: 100%;}
+	
+	#name_date_2 {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 0px;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		}
+	#name_date_2 h3 {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		margin-top: 10px;
+		margin-bottom: 30px;
+		}
+	#prototype { max-width: 100%;
+		}
+	#final {
+		padding-bottom: 10px;
+		border-bottom: 2px solid black;}
+	.final {
+		border-top: 2px solid black;}
+	#nav_f {
+		display: flex;
+		justify-content: space-between;
+		}
+	#contact_tag {
+		margin: 0;
+		padding-top: 10px;
+		font-family: 'poppins';
+		font-size: 30px;
+		font-weight: 300;
+		}
+	#links {
+		margin: 0;
+		padding-top: 27px;
+		margin-bottom: 8px;
+		width: 100%;
+		padding-left: 0px;
+		}
+	#links li{
+		padding-left: 0px;
+		list-style: none;
+		}
+	#links a {
+		text-decoration: none;
+		color: black;
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		}
+	#links a:hover {
+		color: blue;
+		}
+	footer {
+		border-bottom: 2px solid black;
+		margin-bottom: 8px;
+		}
+	
+	
+	/* bellow CSS for iPad */
+	@media all and (min-width: 600px) {
+	section {display: grid; 
+			grid-template-rows: 1fr; 
+			grid-template-columns: 25% 25% 50%;}
+	#menu {grid-column: 1/ 4;
+			width: 100%;}
+	header {display: flex;
+			border-bottom: 2px solid black;
+			justify-content: space-between;
+			}
+	#about {grid-column: 1/ 2;
+			max-width: 25%;}
+	#about_p {grid-column: 2/ 4;
+			max-width: 75%;
+			border-bottom: none;
+			padding-top: 0px;
+			}
+	#work {display: flex;
+			border-bottom: 2px solid black;
+			justify-content: space-between;}
+	#work_tag{grid-column: 1/ 2;
+			max-width: 25%;
+			}
+	#work_pieces {grid-column: 2/ 4;
+			width: 75%;}
+	#piece_1 {grid-column: 2/4;
+			min-width: 75%;
+			display: flex;
+			justify-content: space-between;
+			}
+	#flex {
+			grid-column: 2/4;
+			min-width: 75%;
+			display: flex;
+			justify-content: space-between;}
+	#name_date {
+			padding: 0px;
+			margin-top: 0px;
+			margin-right: 20px;
+			}
+	#na me_date h3 {
+			padding: 0px;
+			padding-right: 5px;}
+	#na me_date_2 h3 {
+			padding: 0px;
+			padding-right: 5px;}
+	#name_date_2 {
+			padding: 0px;
+			margin-top: 0px;
+			margin-right: 20px;
+			}
+	#img_1 {grid-column: 2/ 4;
+			max-width: 65%;
+			display: block;
+			height: 100%;
+			}
+	#wire { grid-column: 2/4;
+			width: 100%;
+			flex: wrap;
+			display: block;
+			margin-bottom: 10px;
+			}
+	#final {grid-column: 2/4;
+			display: flex;
+			max-width: 75%;
+			border: none;}
+	.final {border: none;}
+	#prototype {margin-left: 10px;
+			height: 80vh;
+			margin-top: 10px;
+			margin-bottom: 10px;}
+	footer {margin-top: 20px;
+			border-top: 2px solid black;}
+	#nav_f {display: flex;
+			justify-content: space-between;}
+	#contact_tag {grid-column: 1/ 2;
+			max-width: 25%;}
+	#links {grid-column: 2/ 4;
+			max-width: 75%;
+			border-bottom: none;
+			padding-top: 10px;}
+
+	header, footer  {grid-column: 1 / 4;}
+	#work {grid-column: 1 / 4;}
+	
+	
+	
+</style>
+</head>
+<body>
+<main>
+<section>
+	<nav id=menu>
+		<h2 id=nav>
+			<a href="index.html">ANA BOMBIN ORDAS</a>
+			<a href="index.html"><img id=arrow src="images/arrow.png" alt="back"></a>
+		</h2>
+	</nav>
+
+	<header>
+		<h2 id=about>Data Portrait</h2>
+		<article id=about_p>
+			 <iframe class=frame id=image_60  style="align: right; overflow: hidden;" src="https://editor.p5js.org/anabombin/full/M1JWQT0Eo"></iframe>
+		</article>
+	</header>	
+	
+	<article id=work>
+		<h2 id=work_tag>Process</h2>
+		
+		<div id=work_pieces>
+		<article id=piece_1>
+			<div id=name_p>
+				<article id=name_date>
+					<h3 id=name>Description</h3>
+					<h3 id=date></h3>
+				</article>
+			</div>
+				<div id=img_1>
+					<p>The idea behind this sketch was to find a way to visualize the never ending amount of stairs that I take over the course of a couple of days.
+				</div>
+		</article>
+		<article id=piece_1>
+			<div id=name_p>
+				<article id=name_date_2>
+					<h3 id=name>Process</h3>
+					<h3 id=date></h3>
+				</article>
+			</div>
+            <div id=img_1>
+					<p> I had a hard time coming up with a creative way to visualize stairs and data about stairs, that was not obvious. However, with the data that I collected was of numbers ranging rom 3 steps of stairs all the way to over 100. When depicted visually, I wanted it to display on the screen in a way that was easy to visualize, but still legible.
+                    <p> Finally, I came up with the idea to make it like a bar graph, but scaled to the height of the screen so for longer inputs of information, it would visually showcase a neverending bit of stairs. Similarly to how I feel every time I walk up my 6th floor walk up in NYC. This was not evough for me though, I still wanted it to have some interactive component that made it go beyond just a bar graph.</p>
+                    <p>I came up with the idea of hovering with the mouse over certain portions of the data and that portion moving or translating over the screen in some way that made it easier for the audience to picture the never-ending set of stairs. Shown in the sketches. This was a little harder than expected since I would have to make certain portions of the data overlap others. Finally I settled for my final design, which incorporated all my intended features, but did not have the overlap aspect.</p>
+			</div>
+		</article>
+		<article id=piece_1>
+			<div id=name_p>
+				<article id=name_date_2>
+					<h3 id=name>Process Images</h3>
+					<h3 id=date></h3>
+				</article>
+			</div>
+			<div id=img_1>
+                <img id=image_process src="images/stairs_sketch.jpg" alt="collection composition"></img>
+			</div>
+		</article>
+		<article id=piece_2>
+			<div id=flex>
+				<div id=name_p>
+					<article id=name_date_2>
+						<h3 id=name>Reflection</h3>
+					</article>
+				</div>
+				<div id=img_1>
+					<p> Were I to make this again or reiterate upon it, I would like to attempt for the data to overlap whilst remaining in view on the canvas. I am sure that it can be done but perhaps it is still a little beyong my grasp. Additionally, I had a big chunck of data of negative numbers for stairs that I go down throughout the same period of time. Because fo the nature of the loop, these were not being understood properly. Hence, I would like to figure out a way to make the gradients work in reverse for those parts of the data that were initially negative, to showcase the difference between stairs that I go up versus down in the same amount of time.
+				</div>
+			</div>
+		</article>
+		</div>
+	</article>
+		
+	<header>
+		<h2 id=about class=final>Final Sketch</h2>
+		<div id=final>
+			<article id=about_p>
+				<iframe class=frame id=image_60  style="align: right; overflow: hidden;" src="https://editor.p5js.org/anabombin/full/M1JWQT0Eo"></iframe>
+			</article>
+		</div>
+		
+	</header>
+	
+	<footer id=footer>
+		<nav id=nav_f>
+			<h2 id=contact_tag>Contact</h2>	
+			<ul id=links>
+				<li><a href="all-work.html">Email: anabombin@newschool.edu</a></li>
+				<li><a href="https://anabombin.myportfolio.com/">Full portfolio</a></li>
+				<li><a href="https://www.linkedin.com/in/ana-bombin-270005202/">LinkedIn</a></li>
+			</ul>		
+		</nav>	
+	</footer>
+</section>
+</main>
+</body>
+</html>

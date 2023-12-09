@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="utf-8">
+<title>Form Generator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="link rel="preconnect href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="link rel="preconnect href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,400&family=Poppins&display=swap" rel="stylesheet">
+<style> 
+	/* place your css here and not in an external style sheet. */
+	
+	body {background-image: url('images/background-small.jpg'); background-size: cover; margin: 0px 10px; }
+	
+	section {display: grid; 
+			grid-template-columns: 1fr;}
+	sec tion>* {border: 1px solid green;}
+	
+	#menu {width: 100%;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0px;
+			border-bottom: 2px solid black;
+			padding-top:10px;
+			background: white;
+			}
+	
+	#nav { display: flex;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+		}
+	#nav a {
+		text-decoration: none;
+		color: black; 
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		}
+	#arrow {max-height: 15px;
+		margin-bottom: 0px;
+		padding-bottom: 0px;}
+	#about {
+		margin: 0;
+		padding-top: 2px;
+		font-family: 'poppins';
+		font-size: 30px;
+		font-weight: 300;
+		}
+	#about_p {
+		margin: 0;
+		padding-top: 50px;
+		padding-bottom: 4px;
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		border-bottom: 2px solid black;
+		}
+	#image_75 {
+		width: 400px;
+		margin-top: 10px;
+        height: 435px;
+		margin-left: 10px;
+        }
+	#image_process {
+		width: 50%;
+		margin-top: 10px;
+        }
+	#work {
+		width: 100%;}
+	#work_tag {
+		margin: 0;
+		padding-top: 0px;
+		font-family: 'poppins';
+		font-size: 30px;
+		font-weight: 300;
+		}
+	#name_date {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 50px;
+		margin-bottom: 0px;
+		}
+	#name_date h3 {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		margin-bottom: 30px;
+		}
+	#piece_1 {
+		border-bottom: 2px solid black;
+		}
+	#piece_1 p {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		padding: 0;
+		margin-bottom: 8px;
+		}
+	#piece_2 p {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		padding: 0;
+		margin-bottom: 8px;
+		}
+	#piece_1 img {
+		margin-top: 10px;
+		width: 100%;
+		border: 2px solid grey;
+		margin-bottom: 8px;
+		}
+	#wire {
+		max-width: 100%;}
+	
+	#name_date_2 {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 0px;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		}
+	#name_date_2 h3 {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		margin-top: 10px;
+		margin-bottom: 30px;
+		}
+	#prototype { max-width: 100%;
+		}
+	#final {
+		padding-bottom: 10px;
+		border-bottom: 2px solid black;}
+	.final {
+		border-top: 2px solid black;}
+	#nav_f {
+		display: flex;
+		justify-content: space-between;
+		}
+	#contact_tag {
+		margin: 0;
+		padding-top: 10px;
+		font-family: 'poppins';
+		font-size: 30px;
+		font-weight: 300;
+		}
+	#links {
+		margin: 0;
+		padding-top: 27px;
+		margin-bottom: 8px;
+		width: 100%;
+		padding-left: 0px;
+		}
+	#links li{
+		padding-left: 0px;
+		list-style: none;
+		}
+	#links a {
+		text-decoration: none;
+		color: black;
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		}
+	#links a:hover {
+		color: blue;
+		}
+	footer {
+		border-bottom: 2px solid black;
+		margin-bottom: 8px;
+		}
+	
+	
+	/* bellow CSS for iPad */
+	@media all and (min-width: 600px) {
+	section {display: grid; 
+			grid-template-rows: 1fr; 
+			grid-template-columns: 25% 25% 50%;}
+	#menu {grid-column: 1/ 4;
+			width: 100%;}
+	header {display: flex;
+			border-bottom: 2px solid black;
+			justify-content: space-between;
+			}
+	#about {grid-column: 1/ 2;
+			max-width: 25%;}
+	#about_p {grid-column: 2/ 4;
+			max-width: 75%;
+			border-bottom: none;
+			padding-top: 0px;
+			}
+	#work {display: flex;
+			border-bottom: 2px solid black;
+			justify-content: space-between;}
+	#work_tag{grid-column: 1/ 2;
+			max-width: 25%;
+			}
+	#work_pieces {grid-column: 2/ 4;
+			width: 75%;}
+	#piece_1 {grid-column: 2/4;
+			min-width: 75%;
+			display: flex;
+			justify-content: space-between;
+			}
+	#flex {
+			grid-column: 2/4;
+			min-width: 75%;
+			display: flex;
+			justify-content: space-between;}
+	#name_date {
+			padding: 0px;
+			margin-top: 0px;
+			margin-right: 20px;
+			}
+	#na me_date h3 {
+			padding: 0px;
+			padding-right: 5px;}
+	#na me_date_2 h3 {
+			padding: 0px;
+			padding-right: 5px;}
+	#name_date_2 {
+			padding: 0px;
+			margin-top: 0px;
+			margin-right: 20px;
+			}
+	#img_1 {grid-column: 2/ 4;
+			max-width: 65%;
+			display: block;
+			height: 100%;
+			}
+	#wire { grid-column: 2/4;
+			width: 100%;
+			flex: wrap;
+			display: block;
+			margin-bottom: 10px;
+			}
+	#final {grid-column: 2/4;
+			display: flex;
+			max-width: 75%;
+			border: none;}
+	.final {border: none;}
+	#prototype {margin-left: 10px;
+			height: 80vh;
+			margin-top: 10px;
+			margin-bottom: 10px;}
+	footer {margin-top: 20px;
+			border-top: 2px solid black;}
+	#nav_f {display: flex;
+			justify-content: space-between;}
+	#contact_tag {grid-column: 1/ 2;
+			max-width: 25%;}
+	#links {grid-column: 2/ 4;
+			max-width: 75%;
+			border-bottom: none;
+			padding-top: 10px;}
+
+	header, footer  {grid-column: 1 / 4;}
+	#work {grid-column: 1 / 4;}
+	
+	
+	
+</style>
+</head>
+<body>
+<main>
+<section>
+	<nav id=menu>
+		<h2 id=nav>
+			<a href="index.html">ANA BOMBIN ORDAS</a>
+			<a href="index.html"><img id=arrow src="images/arrow.png" alt="back"></a>
+		</h2>
+	</nav>
+
+	<header>
+		<h2 id=about>Form Generator</h2>
+		<article id=about_p>
+			 <iframe class=frame id=image_75  style="align: right; overflow: hidden;" src="https://editor.p5js.org/anabombin/full/te6owGzAh"></iframe>
+		</article>
+	</header>	
+	
+	<article id=work>
+		<h2 id=work_tag>Process</h2>
+		
+		<div id=work_pieces>
+		<article id=piece_1>
+			<div id=name_p>
+				<article id=name_date>
+					<h3 id=name>Description</h3>
+					<h3 id=date></h3>
+				</article>
+			</div>
+				<div id=img_1>
+					<p>My initial idea was to create a form generator that had some meaning behind it. I began to explore what simple designs could have a small interaction to make it more meaningful. My first thought was to make a smiley face with a changing arc shape for a mouth. This could reflect the faces' mood. To add something else to the design, I could change the color of the face to reflect its mood: red for sad and yellow or green for happy.
+				</div>
+		</article>
+		<article id=piece_1>
+			<div id=name_p>
+				<article id=name_date_2>
+					<h3 id=name>Process</h3>
+					<h3 id=date></h3>
+				</article>
+			</div>
+            <div id=img_1>
+					<p> With such a simple design, there weren't many shapes to draw. One bigger ellipse shape and two identical ellipses for eyes. I had more trouble with the arc and making it stay within the faces range. Similarly with the colors, I had to make sure that they would change in accordance with the arc. Once I finished the design, It felt like something was missing. There should be more interaction: how could I change the shape of the face in different directions but maintain its centered position?
+					<p> With the arc shape, I was limited in movement so I also explored curve and Bezier curve. Ultimately, the most appropriate one for this particular shape seemed to be the BezierVertex as it had only two anchor points and one vertex, making it easier to control. However, the shape appeared very static due to its color not changing, I doubled it and made them overlap using transparency which made the design more active. Finally, I decided to add a random factor to make it ever changing but I didn't like how the colors flickered constantly. By using the mousePressed function, I was able to make the colors change for each of the shapes as the user's will.</p>
+					<p> I made multiple drawings and iterations depicting how I planned on making the shape move.
+			</div>
+		</article>
+		<article id=piece_1>
+			<div id=name_p>
+				<article id=name_date_2>
+					<h3 id=name>Process Images</h3>
+					<h3 id=date></h3>
+				</article>
+			</div>
+			<div id=img_1>
+                <img id=image_process src="images/form-sketches-1.jpg" alt="collection composition"></img>
+                <img id=image_process src="images/form-sketches-2.jpg" alt="collection composition"></img>
+			</div>
+		</article>
+		<article id=piece_2>
+			<div id=flex>
+				<div id=name_p>
+					<article id=name_date_2>
+						<h3 id=name>Reflection</h3>
+					</article>
+				</div>
+				<div id=img_1>
+					<p>This project really tested and challenged me to rely on process drawings. I struggled the most to make the shapes turn into circles when the mouse was in the center of the screen. That was my objective all along, and after several iterations and trial and error, I almost gave up. However, through the process, I learned about different shapes and found different outcomes that I was not expecting.
+				</div>
+			</div>
+		</article>
+		</div>
+	</article>
+		
+	<header>
+		<h2 id=about class=final>Final Sketches</h2>
+		<div id=final>
+			<article id=about_p>
+				<iframe class=frame id=image_75  style="align: right; overflow: hidden;" src="https://editor.p5js.org/anabombin/full/te6owGzAh"></iframe>
+			</article>
+			<article id=about_p>
+				<iframe class=frame id=image_75  style="align: right; overflow: hidden;" src="https://editor.p5js.org/anabombin/full/qeKCBP61b"></iframe>
+			</article>
+		</div>
+		
+	</header>
+	
+	<footer id=footer>
+		<nav id=nav_f>
+			<h2 id=contact_tag>Contact</h2>	
+			<ul id=links>
+				<li><a href="all-work.html">Email: anabombin@newschool.edu</a></li>
+				<li><a href="https://anabombin.myportfolio.com/">Full portfolio</a></li>
+				<li><a href="https://www.linkedin.com/in/ana-bombin-270005202/">LinkedIn</a></li>
+			</ul>		
+		</nav>	
+	</footer>
+</section>
+</main>
+</body>
+</html>

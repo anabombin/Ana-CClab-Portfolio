@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="utf-8">
+<title>Autobiographical Game</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="link rel="preconnect href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="link rel="preconnect href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,400&family=Poppins&display=swap" rel="stylesheet">
+<style> 
+	/* place your css here and not in an external style sheet. */
+	
+	body {background-image: url('images/background-small.jpg'); background-size: cover; margin: 0px 10px; }
+	
+	section {display: grid; 
+			grid-template-columns: 1fr;}
+	sec tion>* {border: 1px solid green;}
+	
+	#menu {width: 100%;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0px;
+			border-bottom: 2px solid black;
+			padding-top:10px;
+			background: white;
+			}
+	
+	#nav { display: flex;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+		}
+	#nav a {
+		text-decoration: none;
+		color: black; 
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		}
+	#arrow {max-height: 15px;
+		margin-bottom: 0px;
+		padding-bottom: 0px;}
+	#about {
+		margin: 0;
+		padding-top: 2px;
+		font-family: 'poppins';
+		font-size: 30px;
+		font-weight: 300;
+		}
+	#about_p {
+		margin: 0;
+		padding-top: 50px;
+		padding-bottom: 4px;
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		border-bottom: 2px solid black;
+		}
+	#image_s {
+		width: 400px;
+		margin-top: 10px;
+        height: 400px;
+		margin-left: 10px;
+        }
+	#image_process {
+		width: 50%;
+		margin-top: 10px;
+        }
+	#work {
+		width: 100%;}
+	#work_tag {
+		margin: 0;
+		padding-top: 0px;
+		font-family: 'poppins';
+		font-size: 30px;
+		font-weight: 300;
+		}
+	#name_date {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 50px;
+		margin-bottom: 0px;
+		}
+	#name_date h3 {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		margin-bottom: 30px;
+		}
+	#piece_1 {
+		border-bottom: 2px solid black;
+		}
+	#piece_1 p {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		padding: 0;
+		margin-bottom: 8px;
+		}
+	#piece_2 p {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		padding: 0;
+		margin-bottom: 8px;
+		}
+	#piece_1 img {
+		margin-top: 10px;
+		width: 100%;
+		border: 2px solid grey;
+		margin-bottom: 8px;
+		}
+	#wire {
+		max-width: 100%;}
+	
+	#name_date_2 {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 0px;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		}
+	#name_date_2 h3 {
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		margin-top: 10px;
+		margin-bottom: 30px;
+		}
+	#prototype { max-width: 100%;
+		}
+	#final {
+		padding-bottom: 10px;
+		border-bottom: 2px solid black;}
+	.final {
+		border-top: 2px solid black;}
+	#nav_f {
+		display: flex;
+		justify-content: space-between;
+		}
+	#contact_tag {
+		margin: 0;
+		padding-top: 10px;
+		font-family: 'poppins';
+		font-size: 30px;
+		font-weight: 300;
+		}
+	#links {
+		margin: 0;
+		padding-top: 27px;
+		margin-bottom: 8px;
+		width: 100%;
+		padding-left: 0px;
+		}
+	#links li{
+		padding-left: 0px;
+		list-style: none;
+		}
+	#links a {
+		text-decoration: none;
+		color: black;
+		font-family: 'poppins';
+		font-size: 15px;
+		font-weight: 400;
+		}
+	#links a:hover {
+		color: blue;
+		}
+	footer {
+		border-bottom: 2px solid black;
+		margin-bottom: 8px;
+		}
+	
+	
+	/* bellow CSS for iPad */
+	@media all and (min-width: 600px) {
+	section {display: grid; 
+			grid-template-rows: 1fr; 
+			grid-template-columns: 25% 25% 50%;}
+	#menu {grid-column: 1/ 4;
+			width: 100%;}
+	header {display: flex;
+			border-bottom: 2px solid black;
+			justify-content: space-between;
+			}
+	#about {grid-column: 1/ 2;
+			max-width: 25%;}
+	#about_p {grid-column: 2/ 4;
+			max-width: 75%;
+			border-bottom: none;
+			padding-top: 0px;
+			}
+	#work {display: flex;
+			border-bottom: 2px solid black;
+			justify-content: space-between;}
+	#work_tag{grid-column: 1/ 2;
+			max-width: 25%;
+			}
+	#work_pieces {grid-column: 2/ 4;
+			width: 75%;}
+	#piece_1 {grid-column: 2/4;
+			min-width: 75%;
+			display: flex;
+			justify-content: space-between;
+			}
+	#flex {
+			grid-column: 2/4;
+			min-width: 75%;
+			display: flex;
+			justify-content: space-between;}
+	#name_date {
+			padding: 0px;
+			margin-top: 0px;
+			margin-right: 20px;
+			}
+	#na me_date h3 {
+			padding: 0px;
+			padding-right: 5px;}
+	#na me_date_2 h3 {
+			padding: 0px;
+			padding-right: 5px;}
+	#name_date_2 {
+			padding: 0px;
+			margin-top: 0px;
+			margin-right: 20px;
+			}
+	#img_1 {grid-column: 2/ 4;
+			max-width: 65%;
+			display: block;
+			height: 100%;
+			}
+	#wire { grid-column: 2/4;
+			width: 100%;
+			flex: wrap;
+			display: block;
+			margin-bottom: 10px;
+			}
+	#final {grid-column: 2/4;
+			display: flex;
+			max-width: 75%;
+			border: none;}
+	.final {border: none;}
+	#prototype {margin-left: 10px;
+			height: 80vh;
+			margin-top: 10px;
+			margin-bottom: 10px;}
+	footer {margin-top: 20px;
+			border-top: 2px solid black;}
+	#nav_f {display: flex;
+			justify-content: space-between;}
+	#contact_tag {grid-column: 1/ 2;
+			max-width: 25%;}
+	#links {grid-column: 2/ 4;
+			max-width: 75%;
+			border-bottom: none;
+			padding-top: 10px;}
+
+	header, footer  {grid-column: 1 / 4;}
+	#work {grid-column: 1 / 4;}
+	
+	
+	
+</style>
+</head>
+<body>
+<main>
+<section>
+	<nav id=menu>
+		<h2 id=nav>
+			<a href="index.html">ANA BOMBIN ORDAS</a>
+			<a href="index.html"><img id=arrow src="images/arrow.png" alt="back"></a>
+		</h2>
+	</nav>
+
+	<header>
+		<h2 id=about>Autobiographical Game</h2>
+		<article id=about_p>
+			 <iframe class=frame id=image_s  style="align: right; overflow: hidden;" src="https://anabombin.github.io/PackYourLife/"></iframe>
+		</article>
+	</header>	
+	
+	<article id=work>
+		<h2 id=work_tag>Process</h2>
+		
+		<div id=work_pieces>
+		<article id=piece_1>
+			<div id=name_p>
+				<article id=name_date>
+					<h3 id=name>Description</h3>
+					<h3 id=date></h3>
+				</article>
+			</div>
+				<div id=img_1>
+					<p>For my autobiographical game, I wanted to recreate the same feeling I felt since the age of 10, when every couple of days, I would have to pack a suitcase to bring from one of my parent's house to the other. It is an experience that most children of divorced parents share, when on top of all of their regular routines, you have to pack up all your belongings that you will need for the next week into a suitcase, hoping that you don't forget anything.
+					<p>Though there is no main character moving across the screen per se, the idea is to make the game function like a puzzle, where under time constraints, the player has to find the way to fit all of the clothing items in one suitcase.</p>
+					<p>The three scenes could either be different levels where the time constraints get shorter and there are more items to fit in the suitcase, or perhaps each scene is a different thing to pack. For example, a suitcase, a school bag and one other thing.</p>
+				</div>
+		</article>
+		<article id=piece_1>
+			<div id=name_p>
+				<article id=name_date_2>
+					<h3 id=name>Process</h3>
+					<h3 id=date></h3>
+				</article>
+			</div>
+            <div id=img_1>
+					<p> When beginning to grey box and map out the scenes of the game, I instantly realized that the two main interactive scenes felt very repetitive. The person playing would essentially be dragging scattered items to one object in the center of the screen. I was prompted to rethink one of the scenes to have a slightly different interaction, resulting in a more engaging experience for the user. Because the backpack has a different shape to the suitcase, where one can't really organize things like a puzzle and be able to see the elements fit in with one another, I decided to change the objective of the scene to make the user pick up as many things around the scene as possible at the same time, essentially stuffing the backpack; whilst trying not to drop anything.
+                    <p> Additionally, the idea that the user could win the game by placing all items in the suitcase defeated the purpose of showcasing the struggle of trying to remember to pack everything one may need. I don't think that there was a single time that I didn't forget at least one item. Coupled with the odd shaped clothing that would be quite complex to make collisions, the objective changed to making the player try to put as many items in the suitcase under time constraints in no specific order. By making the time constraint be too difficult to ever successfully complete the game or the scene, I am attempting to recreate the frustration experienced when you know that no matter how much you plan in advance, you will always forget to pack something</p>
+                    <p>After completing the initial grey box game and having a couple people play it, it became evident that it needed more complexity. Though the game was functional and told the story it needed to, it felt short. I went back to the drawing board where I developed the narrative based on suggestions I received and came up with a second game flow. This took me to my second grey box game, and final game flow.</p>
+			</div>
+		</article>
+		<article id=piece_1>
+			<div id=name_p>
+				<article id=name_date_2>
+					<h3 id=name>Process Images</h3>
+					<h3 id=date></h3>
+				</article>
+			</div>
+			<div id=img_1>
+                <img id=image_process src="images/clutter.jpg" alt="collection composition"></img>
+				<img id=image_process src="images/game_flow.jpg" alt="collection composition"></img>
+			</div>
+		</article>
+		<article id=piece_2>
+			<div id=flex>
+				<div id=name_p>
+					<article id=name_date_2>
+						<h3 id=name>Reflection</h3>
+					</article>
+				</div>
+				<div id=img_1>
+					<p> Though the game took many twists and turns from the original idea of a puzzle into a suitcase, it is still able to convey the same frustration felt by children of divorce when packing or leaving something behind. Additionally, the illustrations have a child-like feel, with imperfect lines and coloring; adding to the element of clutter.
+					<p>Were I to reiterate on the game, I would attempt to make the sprite animated, as if it was walking rather than just gliding across the screen. Moreover, I would definitely add a score element and rework the sizes of the images like clothing and clutter to make the game play more realistic and engaging.</p>
+				</div>
+			</div>
+		</article>
+		</div>
+	</article>
+		
+	<header>
+		<h2 id=about class=final>Grey Box 1 & 2</h2>
+		<div id=final>
+			<article id=about_p>
+				<iframe class=frame id=image_s  style="align: right; overflow: hidden;" src="https://editor.p5js.org/anabombin/full/kT7leet24"></iframe>
+			</article>
+			<article id=about_p>
+				<iframe class=frame id=image_s  style="align: right; overflow: hidden;" src="https://editor.p5js.org/anabombin/full/oFM1dClMP"></iframe>
+			</article>
+		</div>
+		
+	</header>
+	
+	<footer id=footer>
+		<nav id=nav_f>
+			<h2 id=contact_tag>Contact</h2>	
+			<ul id=links>
+				<li><a href="all-work.html">Email: anabombin@newschool.edu</a></li>
+				<li><a href="https://anabombin.myportfolio.com/">Full portfolio</a></li>
+				<li><a href="https://www.linkedin.com/in/ana-bombin-270005202/">LinkedIn</a></li>
+			</ul>		
+		</nav>	
+	</footer>
+</section>
+</main>
+</body>
+</html>
