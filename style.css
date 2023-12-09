@@ -241,7 +241,7 @@ footer {
 
 
 /* bellow CSS for iPad */
-@media all and (min-width: 1000px) {
+@media all and (min-width: 600px) {
 section {
     display: grid; 
     grid-template-rows: 1fr; 
